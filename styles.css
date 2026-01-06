@@ -178,6 +178,20 @@ body {
     transition: all 0.3s ease;
 }
 
+body.dark-mode .theme-toggle {
+    background: #1e293b;
+    border-color: #fbbf24;
+}
+
+body.dark-mode .theme-toggle:hover {
+    background: #fbbf24;
+    border-color: #fbbf24;
+}
+
+body.dark-mode .theme-toggle:hover i {
+    color: #1e293b;
+}
+
 body.dark-mode .theme-toggle i {
     color: #fbbf24;
 }
@@ -1496,7 +1510,7 @@ section {
 }
 
 /* Dark Mode Styles */
-.dark-mode {
+body.dark-mode {
     --text-color: #e5e7eb;
     --text-light: #9ca3af;
     --bg-light: #1f2937;
@@ -1506,128 +1520,423 @@ section {
     --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.4);
     --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.5);
     --shadow-xl: 0 20px 40px rgba(0, 0, 0, 0.6);
+    --navbar-bg: rgba(17, 24, 39, 0.95);
+    --hero-gradient: linear-gradient(135deg, #1e293b 0%, #111827 100%);
 }
 
-.dark-mode body {
+body.dark-mode {
     background: #0f172a;
 }
 
-.dark-mode .navbar {
+body.dark-mode .navbar {
     background: rgba(17, 24, 39, 0.95);
+    border-bottom-color: rgba(255, 255, 255, 0.1);
 }
 
-.dark-mode .hero {
+body.dark-mode .nav-link {
+    color: #e5e7eb;
+}
+
+body.dark-mode .nav-link:hover {
+    color: #60a5fa;
+}
+
+body.dark-mode .nav-menu {
+    background: #111827;
+}
+
+body.dark-mode .hamburger span {
+    background: #e5e7eb;
+}
+
+body.dark-mode .hero {
     background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
 }
 
-.dark-mode .about,
-.dark-mode .projects,
-.dark-mode .contact {
+body.dark-mode .hero::before {
+    background: radial-gradient(circle, rgba(59, 130, 246, 0.15) 0%, transparent 70%);
+}
+
+body.dark-mode .hero-image img {
+    border-color: #374151;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode .hero-image img:hover {
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6);
+}
+
+body.dark-mode .about {
     background: #0f172a;
 }
 
-.dark-mode .experience {
+body.dark-mode .projects {
+    background: #0f172a;
+}
+
+body.dark-mode .contact {
+    background: #0f172a;
+}
+
+body.dark-mode .experience {
     background: #1e293b;
 }
 
-.dark-mode .awards {
+/* About Section Dark Mode */
+body.dark-mode .about-text {
+    color: #9ca3af;
+}
+
+body.dark-mode .skill-category {
+    background: #1e293b;
+    border-color: #374151;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .skill-category:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+    border-color: #3b82f6;
+}
+
+body.dark-mode .skill-category h3 {
+    color: #60a5fa;
+}
+
+body.dark-mode .skill-category li {
+    color: #9ca3af;
+}
+
+body.dark-mode .skill-category li::before {
+    color: #60a5fa;
+}
+
+body.dark-mode .skill-category li strong {
+    color: #e5e7eb;
+    background: linear-gradient(135deg, #1e3a8a, #1e40af);
+}
+
+/* Experience Section Dark Mode */
+body.dark-mode .timeline::before {
+    background: #3b82f6;
+}
+
+body.dark-mode .timeline-dot {
+    background: #3b82f6;
+    border-color: #1e293b;
+    box-shadow: 0 0 0 4px #3b82f6;
+}
+
+body.dark-mode .timeline-content {
+    background: #111827;
+    border-color: #374151;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .timeline-content:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+    border-color: #3b82f6;
+}
+
+body.dark-mode .timeline-header h3 {
+    color: #e5e7eb;
+}
+
+body.dark-mode .timeline-date {
+    color: #60a5fa;
+}
+
+body.dark-mode .company {
+    color: #9ca3af;
+}
+
+body.dark-mode .experience-list li {
+    color: #9ca3af;
+}
+
+body.dark-mode .experience-list li::before {
+    color: #60a5fa;
+}
+
+/* Projects Section Dark Mode */
+body.dark-mode .project-card {
+    background: #111827;
+    border-color: #374151;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .project-card:hover {
+    box-shadow: 0 12px 40px rgba(59, 130, 246, 0.3);
+    border-color: #3b82f6;
+}
+
+body.dark-mode .project-card h3 {
+    color: #e5e7eb;
+}
+
+body.dark-mode .project-description {
+    color: #9ca3af;
+}
+
+body.dark-mode .tech-tag {
+    background: rgba(59, 130, 246, 0.2);
+    color: #60a5fa;
+    border-color: rgba(59, 130, 246, 0.3);
+}
+
+body.dark-mode .project-impact {
+    background: #1e293b;
+    border-color: #374151;
+}
+
+body.dark-mode .impact-item {
+    color: #9ca3af;
+}
+
+body.dark-mode .impact-item i {
+    color: #10b981;
+}
+
+/* Awards Section Dark Mode */
+body.dark-mode .awards {
     background: linear-gradient(135deg, #1e1612 0%, #292520 50%, #1e1612 100%);
     border-top-color: #f59e0b;
     border-bottom-color: #f59e0b;
 }
 
-.dark-mode .awards::before,
-.dark-mode .awards::after {
+body.dark-mode .awards::before,
+body.dark-mode .awards::after {
     opacity: 0.5;
 }
 
-.dark-mode .awards .section-title {
+body.dark-mode .awards .section-title {
     color: #fbbf24;
     text-shadow: 2px 2px 4px rgba(251, 191, 36, 0.3);
 }
 
-.dark-mode .awards .section-title::after {
+body.dark-mode .awards .section-title::after {
     background: linear-gradient(90deg, #f59e0b 0%, #fbbf24 50%, #f59e0b 100%);
 }
 
-.dark-mode .awards-intro {
+body.dark-mode .awards-intro {
     color: #fde68a;
 }
 
-.dark-mode .award-card-new {
+body.dark-mode .award-card-new {
     background: #1e293b;
     border-color: #374151;
 }
 
-.dark-mode .award-card-new:hover {
+body.dark-mode .award-card-new:hover {
     border-color: #f59e0b;
     box-shadow: 0 25px 50px rgba(245, 158, 11, 0.4);
 }
 
-.dark-mode .award-description-new {
+body.dark-mode .award-card-new h3 {
+    color: #e5e7eb;
+}
+
+body.dark-mode .award-org-new {
+    color: #60a5fa;
+}
+
+body.dark-mode .award-org-new i {
+    color: #60a5fa;
+}
+
+body.dark-mode .award-year {
     color: #9ca3af;
 }
 
-.dark-mode .highlight-tag {
+body.dark-mode .award-year i {
+    color: #10b981;
+}
+
+body.dark-mode .award-description-new {
+    color: #9ca3af;
+}
+
+body.dark-mode .highlight-tag {
     background: linear-gradient(135deg, #78350f, #92400e);
     color: #fbbf24;
     border-color: #b45309;
 }
 
-.dark-mode .highlight-tag:hover {
+body.dark-mode .highlight-tag:hover {
     background: linear-gradient(135deg, #92400e, #b45309);
     box-shadow: 0 4px 12px rgba(245, 158, 11, 0.4);
 }
 
-.dark-mode .pending-overlay {
+body.dark-mode .pending-overlay {
     background: linear-gradient(135deg, rgba(15, 23, 42, 0.5) 0%, rgba(30, 41, 59, 0.5) 100%);
 }
 
-.dark-mode .award-placeholder-image {
+body.dark-mode .award-placeholder-image {
     background: linear-gradient(135deg, #374151 0%, #4b5563 100%);
 }
 
-.dark-mode .pending-notice {
+body.dark-mode .pending-notice {
     background: linear-gradient(135deg, #422006, #78350f);
     color: #fcd34d;
     border-color: #92400e;
 }
 
-.dark-mode .timeline::before {
-    background: var(--primary-color);
+/* Certifications Section Dark Mode */
+body.dark-mode .certifications {
+    background: linear-gradient(135deg, #1e1b2e 0%, #2d1b3d 50%, #1e1b2e 100%);
 }
 
-.dark-mode .timeline-dot {
-    border-color: #1e293b;
+body.dark-mode .certifications .section-title {
+    color: #e5e7eb;
 }
 
-.dark-mode .cert-card {
-    background: rgba(255, 255, 255, 0.08);
+body.dark-mode .certifications .section-title::after {
+    background: linear-gradient(90deg, #a78bfa, #8b5cf6, #a78bfa);
+}
+
+body.dark-mode .certifications-intro {
+    color: #d1d5db;
+}
+
+body.dark-mode .cert-card {
+    background: rgba(30, 41, 59, 0.8);
     backdrop-filter: blur(20px);
-    border-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(139, 92, 246, 0.3);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
 }
 
-.dark-mode .cert-card:hover {
-    background: rgba(255, 255, 255, 0.12);
-    border-color: rgba(255, 255, 255, 0.2);
+body.dark-mode .cert-card:hover {
+    background: rgba(30, 41, 59, 0.95);
+    border-color: rgba(139, 92, 246, 0.5);
+    box-shadow: 0 12px 32px rgba(139, 92, 246, 0.3);
 }
 
-.dark-mode .cert-card h3 {
+body.dark-mode .cert-card h3 {
     color: #e5e7eb;
 }
 
-.dark-mode .skill-category li strong {
-    color: #e5e7eb;
-    background: linear-gradient(135deg, #1e3a8a, #1e40af);
+body.dark-mode .cert-issuer {
+    color: #a78bfa;
 }
 
-.dark-mode .cert-card.featured-cert::after {
+body.dark-mode .cert-tag {
+    background: rgba(139, 92, 246, 0.2);
+    color: #c4b5fd;
+    border-color: rgba(139, 92, 246, 0.4);
+}
+
+body.dark-mode .cert-card.featured-cert::after {
     background: linear-gradient(135deg, #f59e0b 0%, #dc2626 100%);
     box-shadow: 0 4px 12px rgba(245, 158, 11, 0.5);
 }
 
-.dark-mode .footer {
+/* Contact Section Dark Mode */
+body.dark-mode .contact-intro {
+    color: #9ca3af;
+}
+
+body.dark-mode .contact-item {
+    background: #111827;
+    border-color: #374151;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .contact-item:hover {
+    background: var(--gradient-2);
+    box-shadow: 0 8px 24px rgba(59, 130, 246, 0.4);
+    border-color: transparent;
+}
+
+body.dark-mode .contact-item i {
+    color: #60a5fa;
+}
+
+body.dark-mode .contact-item a,
+body.dark-mode .contact-item span {
+    color: #e5e7eb;
+}
+
+/* Section Titles Dark Mode */
+body.dark-mode .section-title {
+    color: #e5e7eb;
+}
+
+body.dark-mode .section-title::after {
+    background: var(--gradient-2);
+}
+
+/* Social Icons Dark Mode */
+body.dark-mode .social-icon {
+    background: #1e293b;
+    border-color: #374151;
+    color: #60a5fa;
+}
+
+body.dark-mode .social-icon:hover {
+    background: var(--gradient-2);
+    border-color: transparent;
+}
+
+/* Buttons Dark Mode */
+body.dark-mode .btn-secondary {
+    border-color: #60a5fa;
+    color: #60a5fa;
+}
+
+body.dark-mode .btn-secondary:hover {
+    background: var(--gradient-2);
+    border-color: transparent;
+}
+
+body.dark-mode .btn-outline {
+    border-color: #60a5fa;
+    color: #60a5fa;
+}
+
+body.dark-mode .btn-outline:hover {
+    background: var(--gradient-2);
+    border-color: transparent;
+}
+
+/* Footer Dark Mode */
+body.dark-mode .footer {
     background: #0f172a;
+    border-top: 1px solid #374151;
+}
+
+body.dark-mode .footer p {
+    color: #9ca3af;
+}
+
+/* Modal Dark Mode */
+body.dark-mode .modal-overlay {
+    background: rgba(0, 0, 0, 0.9);
+}
+
+body.dark-mode .modal-content {
+    background: #111827;
+    color: #e5e7eb;
+    border: 1px solid #374151;
+}
+
+body.dark-mode .modal-content h2 {
+    color: #e5e7eb;
+}
+
+body.dark-mode .modal-body {
+    color: #9ca3af;
+}
+
+body.dark-mode .modal-body strong {
+    color: #e5e7eb;
+}
+
+body.dark-mode .modal-close {
+    color: #9ca3af;
+}
+
+body.dark-mode .modal-close:hover {
+    color: #e5e7eb;
+    background: #374151;
 }
 
 /* Theme Toggle Button */
