@@ -824,12 +824,12 @@ section {
 }
 
 .cert-card.duke .cert-issuer {
-    color: #012169;
+    color: #2562f0;
 }
 
 .cert-card.duke .cert-tag {
     background: #01216920;
-    color: #012169;
+    color: #3b72f4;
     border-color: #01216940;
 }
 
