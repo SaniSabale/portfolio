@@ -179,14 +179,16 @@ learnMoreBtns.forEach((btn, index) => {
 function getProjectDetails(index) {
     const projects = [
         {
-            title: 'AI Mentor & Teaching Assistant Chatbots',
+            title: 'AI Mentor & Teaching Assistants with Automated Submission Evaluation & Feedback',
             details: `
-                <p><strong>Overview:</strong> Developed a comprehensive AI-powered mentorship system using RAG-based Large Language Models (LLMs) that revolutionized how students and teachers interact with educational content.</p>
+                <p><strong>Overview:</strong> Developed a comprehensive AI-powered mentorship platform combining 30+ RAG-based LLM chatbots with an intelligent evaluation system. This integrated solution revolutionizes student and teacher engagement while providing instant, actionable feedback at scale.</p>
                 
                 <p><strong>Key Features:</strong></p>
                 <ul>
-                    <li>30+ specialized chatbots tailored for different subjects and learning contexts</li>
+                    <li>30+ specialized AI mentor chatbots tailored for different subjects and learning contexts</li>
                     <li>RAG (Retrieval-Augmented Generation) architecture for accurate, context-aware responses</li>
+                    <li>Automated submission evaluation using NLP and ML models</li>
+                    <li>Instant, personalized feedback generation for student work</li>
                     <li>Real-time mentorship and guidance for students</li>
                     <li>Teaching assistance tools for educators</li>
                     <li>Scalable infrastructure serving 1M+ users</li>
@@ -195,41 +197,47 @@ function getProjectDetails(index) {
                 <p><strong>Impact:</strong></p>
                 <ul>
                     <li>40% increase in student and teacher engagement</li>
-                    <li>Created scalable mentorship model for millions of users</li>
+                    <li>1M+ users reached with scalable mentorship model</li>
+                    <li>Instant feedback reduced iteration time from days to minutes</li>
+                    <li>Significantly improved quality of student work</li>
                     <li>Reduced teacher workload while improving learning outcomes</li>
-                    <li>Enabled personalized learning at scale</li>
+                    <li>Enabled personalized learning and feedback at scale</li>
                 </ul>
                 
-                <p><strong>Technologies:</strong> RAG, LLMs (GPT models), NLP, Vector Databases, API Integration, Cloud Infrastructure</p>
+                <p><strong>Technologies:</strong> RAG, LLMs (GPT models), NLP, Prompt Engineering, Vector Databases, Machine Learning, API Integration, Cloud Infrastructure</p>
                 
-                <p><strong>Role:</strong> Led end-to-end product development from ideation to launch, managed cross-functional team, defined AI strategy, and owned product roadmap.</p>
+                <p><strong>Role:</strong> Led end-to-end product development from ideation to launch, managed cross-functional team, defined AI strategy, collaborated with ML engineers to build evaluation criteria, and owned product roadmap.</p>
             `
         },
         {
-            title: 'AI-Powered Evaluation & Feedback System',
+            title: 'DentoTrust Bot',
             details: `
-                <p><strong>Overview:</strong> Built an intelligent evaluation system that automatically assesses student submissions and generates personalized, actionable feedback using advanced AI/ML techniques.</p>
+                <p><strong>Overview:</strong> An AI intelligence platform built for dentists to speed up diagnostic workflows and standardize case documentation. Think of it as a smart assistant that sits in your pocket, organizing patient symptoms, suggesting relevant clinical questions, and analyzing X-rays to draft provisional case summaries.</p>
                 
                 <p><strong>Key Features:</strong></p>
                 <ul>
-                    <li>Automated submission evaluation using NLP and ML models</li>
-                    <li>Instant, personalized feedback generation</li>
-                    <li>Multi-criteria assessment (content quality, creativity, structure)</li>
-                    <li>Actionable improvement suggestions</li>
-                    <li>Integration with existing learning management systems</li>
+                    <li>Smart conversational assistant for clinical workflows</li>
+                    <li>Organizes patient symptoms and suggests relevant clinical questions</li>
+                    <li>X-ray analysis and image processing capabilities</li>
+                    <li>Automatic draft of provisional case summaries for review</li>
+                    <li>Voice-to-text documentation (turn voice notes into structured case sheets)</li>
+                    <li>Evidence-based differential diagnosis suggestions</li>
+                    <li>Zero-friction setup with no complex configuration required</li>
                 </ul>
                 
-                <p><strong>Impact:</strong></p>
+                <p><strong>Performance & Impact:</strong></p>
                 <ul>
-                    <li>Significantly improved quality of student work</li>
-                    <li>Instant feedback reduced iteration time from days to minutes</li>
-                    <li>Freed up educators to focus on high-value interactions</li>
-                    <li>Scaled personalized feedback to thousands of students</li>
+                    <li>Ultra-fast response time: 433ms (faster than standard AI tools like ChatGPT)</li>
+                    <li>Instant documentation: Turn voice notes into structured case sheets</li>
+                    <li>Decision support: Get evidence-based differential suggestions instantly</li>
+                    <li>Enables dentists to focus more on patients and less on typing notes</li>
+                    <li>Standardizes case documentation across practices</li>
+                    <li>Speeds up diagnostic workflow for solo dentists</li>
                 </ul>
                 
-                <p><strong>Technologies:</strong> NLP, Machine Learning, Prompt Engineering, LLMs, API Design, Cloud Computing</p>
+                <p><strong>Technologies:</strong> AI/ML, Computer Vision, NLP, Voice Processing, Image Analysis, Healthcare AI, Real-time Processing</p>
                 
-                <p><strong>Role:</strong> Owned product vision and roadmap, collaborated with ML engineers and educators to build evaluation criteria, managed deployment and scaling.</p>
+                <p><strong>Goal:</strong> Focus more on the patient, less on typing notes. Built for clinical speed and efficiency.</p>
             `
         },
         {
