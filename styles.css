@@ -465,7 +465,6 @@ section {
     font-size: 1.02rem;
     color: var(--text-light);
     line-height: 1.8;
-    max-width: 800px;
 }
 
 .about-text p {
