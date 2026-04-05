@@ -253,8 +253,56 @@ body.dark-mode .theme-toggle i {
 .hero-description {
     font-size: 1rem;
     color: var(--text-light);
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
     line-height: 1.7;
+}
+
+.hero-recognition {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    line-height: 1.65;
+    margin-bottom: 1.5rem;
+    padding: 0.85rem 1rem;
+    background: var(--bg-light);
+    border-radius: 12px;
+    border-left: 4px solid var(--primary-color);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero-recognition:hover {
+    border-left-color: var(--accent-color);
+    box-shadow: 0 2px 12px rgba(37, 99, 235, 0.1);
+}
+
+.hero-recognition-label {
+    display: block;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--primary-color);
+    margin-bottom: 0.35rem;
+}
+
+.hero-recognition-links {
+    display: block;
+    margin-top: 0.5rem;
+    font-weight: 600;
+}
+
+.hero-recognition-links a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.hero-recognition-links a:hover {
+    text-decoration: underline;
+}
+
+.hero-recognition-sep {
+    margin: 0 0.35rem;
+    color: var(--text-light);
+    font-weight: 400;
 }
 
 .hero-buttons {
@@ -400,6 +448,16 @@ section {
 
 .about-text p {
     margin-bottom: 1.25rem;
+}
+
+.about-text a {
+    color: var(--primary-color);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.about-text a:hover {
+    text-decoration: underline;
 }
 
 .skills-grid {
@@ -670,6 +728,51 @@ section {
 .impact-item i {
     color: var(--success-color);
     font-size: 1.1rem;
+}
+
+.project-recognition-note {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    line-height: 1.45;
+    margin: -0.35rem 0 0.85rem;
+    padding: 0.5rem 0.65rem;
+    background: rgba(37, 99, 235, 0.06);
+    border-radius: 8px;
+}
+
+.project-recognition-note i {
+    margin-top: 0.12rem;
+    flex-shrink: 0;
+}
+
+.project-external-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.project-link-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 0.45rem 0.85rem;
+    border-radius: 8px;
+    border: 1px solid rgba(37, 99, 235, 0.35);
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.project-link-btn:hover {
+    background: rgba(37, 99, 235, 0.08);
+    border-color: var(--primary-color);
 }
 
 /* Certifications Section */
@@ -1125,6 +1228,50 @@ section {
     font-size: 0.8rem;
 }
 
+.award-card-government {
+    border: 2px solid rgba(30, 64, 175, 0.25);
+    box-shadow: 0 8px 28px rgba(30, 64, 175, 0.12);
+}
+
+.award-card-government:hover {
+    border-color: rgba(37, 99, 235, 0.45);
+    box-shadow: 0 16px 48px rgba(37, 99, 235, 0.18);
+}
+
+.award-badge-government {
+    background: linear-gradient(135deg, #1e40af 0%, #1d4ed8 100%);
+    box-shadow: 0 4px 12px rgba(30, 64, 175, 0.35);
+    animation: none;
+}
+
+.award-external-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.award-link-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.82rem;
+    font-weight: 600;
+    padding: 0.5rem 0.9rem;
+    border-radius: 8px;
+    border: 1px solid rgba(37, 99, 235, 0.35);
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.award-link-btn:hover {
+    background: rgba(37, 99, 235, 0.08);
+    border-color: var(--primary-color);
+}
+
 /* Pending Award Styles */
 .pending-award {
     position: relative;
@@ -1495,6 +1642,28 @@ section {
         padding: 1.15rem;
         min-height: auto;
     }
+
+    .project-external-links {
+        flex-direction: column;
+    }
+
+    .project-link-btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .award-external-links {
+        flex-direction: column;
+    }
+
+    .award-link-btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .modal-recognition-gallery {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* Smooth scroll reveal */
@@ -1585,6 +1754,10 @@ body.dark-mode .experience {
 /* About Section Dark Mode */
 body.dark-mode .about-text {
     color: #9ca3af;
+}
+
+body.dark-mode .about-text a {
+    color: #60a5fa;
 }
 
 body.dark-mode .skill-category {
@@ -1694,6 +1867,53 @@ body.dark-mode .impact-item {
 
 body.dark-mode .impact-item i {
     color: #10b981;
+}
+
+body.dark-mode .hero-recognition {
+    background: #1e293b;
+    border-left-color: #60a5fa;
+    color: #9ca3af;
+}
+
+body.dark-mode .hero-recognition-label {
+    color: #60a5fa;
+}
+
+body.dark-mode .hero-recognition-links a {
+    color: #60a5fa;
+}
+
+body.dark-mode .project-recognition-note {
+    background: rgba(59, 130, 246, 0.12);
+    color: #93c5fd;
+}
+
+body.dark-mode .project-link-btn {
+    border-color: rgba(96, 165, 250, 0.45);
+    color: #93c5fd;
+}
+
+body.dark-mode .project-link-btn:hover {
+    background: rgba(59, 130, 246, 0.15);
+    border-color: #60a5fa;
+}
+
+body.dark-mode .award-card-government {
+    border-color: rgba(96, 165, 250, 0.35);
+}
+
+body.dark-mode .award-external-links {
+    border-top-color: rgba(255, 255, 255, 0.08);
+}
+
+body.dark-mode .award-link-btn {
+    border-color: rgba(96, 165, 250, 0.45);
+    color: #93c5fd;
+}
+
+body.dark-mode .award-link-btn:hover {
+    background: rgba(59, 130, 246, 0.15);
+    border-color: #60a5fa;
 }
 
 /* Awards Section Dark Mode */
@@ -1907,6 +2127,60 @@ body.dark-mode .footer p {
     color: #9ca3af;
 }
 
+/* Project modal — India AI / casebook gallery */
+.modal-body a {
+    color: var(--primary-color);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.modal-body a:hover {
+    text-decoration: underline;
+}
+
+.modal-resource-links {
+    margin: 1rem 0 1.25rem;
+}
+
+.modal-resource-links a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.modal-resource-links a:hover {
+    text-decoration: underline;
+}
+
+.modal-recognition-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin: 1.25rem 0 1.5rem;
+    padding-top: 0.5rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.modal-recognition-figure {
+    margin: 0;
+}
+
+.modal-recognition-figure img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    background: var(--bg-light);
+}
+
+.modal-recognition-figure figcaption {
+    margin-top: 0.4rem;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--text-light);
+    line-height: 1.35;
+}
+
 /* Modal Dark Mode */
 body.dark-mode .modal-overlay {
     background: rgba(0, 0, 0, 0.9);
@@ -1928,6 +2202,27 @@ body.dark-mode .modal-body {
 
 body.dark-mode .modal-body strong {
     color: #e5e7eb;
+}
+
+body.dark-mode .modal-body a {
+    color: #60a5fa;
+}
+
+body.dark-mode .modal-resource-links a {
+    color: #60a5fa;
+}
+
+body.dark-mode .modal-recognition-gallery {
+    border-top-color: rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .modal-recognition-figure img {
+    border-color: #374151;
+    background: #1e293b;
+}
+
+body.dark-mode .modal-recognition-figure figcaption {
+    color: #9ca3af;
 }
 
 body.dark-mode .modal-close {

@@ -206,6 +206,27 @@ function getProjectDetails(index) {
                 
                 <p><strong>Technologies:</strong> RAG, LLMs (GPT models), NLP, Prompt Engineering, Vector Databases, Machine Learning, API Integration, Cloud Infrastructure</p>
                 
+                <p><strong>Recognition (2026):</strong></p>
+                <ul>
+                    <li><strong>Casebook author:</strong> Authored a case study on Udhyam Saathi for the Government of India&rsquo;s <em>Real-World Impact of AI in Education</em> casebook, launched at the <strong>India AI Impact Summit</strong> in New Delhi&mdash;<strong>36 AI solutions</strong> selected from <strong>270+ global applications</strong>.</li>
+                    <li><strong>Summit showcase:</strong> Presented the product at the Summit&rsquo;s <strong>South-South</strong> programme to policymakers, researchers, and global development partners (<a href="https://udhyam.org/2026/02/26/udhyam-at-the-india-ai-impact-summit-2026/" target="_blank" rel="noopener noreferrer">summit recap</a>).</li>
+                </ul>
+                <p class="modal-resource-links"><a href="https://d19ob9sqegt2wc.cloudfront.net/stage/uploads/India_AI_Impact_Summit2026_Compendium_Real_World_Impactof_Ai_In_Education_Updated_compressed_5d742de5a3.pdf" target="_blank" rel="noopener noreferrer"><strong>Official casebook (PDF)</strong></a> &middot; <a href="https://udhyam.org/2026/02/26/udhyam-at-the-india-ai-impact-summit-2026/" target="_blank" rel="noopener noreferrer"><strong>Udhyam: India AI Impact Summit 2026</strong></a></p>
+                <div class="modal-recognition-gallery" aria-label="India AI Impact Summit and casebook photos">
+                    <figure class="modal-recognition-figure">
+                        <img src="recognition-india-ai-casebook.jpg" alt="India AI Impact Summit — Real-World AI in Education casebook" loading="lazy" width="640" height="360">
+                        <figcaption>Casebook launch / cover</figcaption>
+                    </figure>
+                    <figure class="modal-recognition-figure">
+                        <img src="recognition-india-ai-summit-showcase.jpg" alt="Showcasing Udhyam Saathi at India AI Impact Summit South×South event" loading="lazy" width="640" height="360">
+                        <figcaption>South-South showcase</figcaption>
+                    </figure>
+                    <figure class="modal-recognition-figure">
+                        <img src="recognition-india-ai-author-pages.jpg" alt="Case study pages authored in the AI in Education casebook" loading="lazy" width="640" height="360">
+                        <figcaption>Author pages in casebook</figcaption>
+                    </figure>
+                </div>
+                
                 <p><strong>Role:</strong> Led end-to-end product development from ideation to launch, managed cross-functional team, defined AI strategy, collaborated with ML engineers to build evaluation criteria, and owned product roadmap.</p>
             `
         },
