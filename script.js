@@ -10,11 +10,11 @@ const themeIcon = document.getElementById('themeIcon');
 
 // Dark Mode Toggle
 function initDarkMode() {
-    // Check for saved theme preference or default to light mode
     const savedTheme = localStorage.getItem('theme');
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
     
-    if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+    if (savedTheme === 'light') {
+        disableDarkMode();
+    } else {
         enableDarkMode();
     }
 }
@@ -290,35 +290,41 @@ function getProjectDetails(index) {
     return projects[index].details;
 }
 
-// Scroll reveal animation
-function revealOnScroll() {
-    const reveals = document.querySelectorAll('.reveal');
-    
-    reveals.forEach(element => {
-        const windowHeight = window.innerHeight;
-        const elementTop = element.getBoundingClientRect().top;
-        const elementVisible = 150;
-        
-        if (elementTop < windowHeight - elementVisible) {
-            element.classList.add('active');
+// Scroll reveal animation with stagger support
+const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+            revealObserver.unobserve(entry.target);
         }
     });
-}
+}, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
 
-// Add reveal class to elements
 window.addEventListener('DOMContentLoaded', () => {
-    const elementsToReveal = document.querySelectorAll(
-        '.skill-category, .timeline-item, .project-card, .award-card-new, .cert-card'
-    );
-    
-    elementsToReveal.forEach(element => {
-        element.classList.add('reveal');
-    });
-    
-    revealOnScroll();
-});
+    const groupSelectors = [
+        { parent: '.skills-grid', child: '.skill-category' },
+        { parent: '.projects-grid', child: '.project-card' },
+        { parent: '.awards-grid-new', child: '.award-card-new' },
+        { parent: '.certifications-grid', child: '.cert-card' },
+    ];
 
-window.addEventListener('scroll', revealOnScroll);
+    groupSelectors.forEach(({ parent, child }) => {
+        document.querySelectorAll(parent).forEach(container => {
+            const children = container.querySelectorAll(child);
+            children.forEach((el, i) => {
+                el.classList.add('reveal');
+                el.setAttribute('data-delay', String(Math.min(i, 4)));
+                revealObserver.observe(el);
+            });
+        });
+    });
+
+    document.querySelectorAll('.timeline-item').forEach((el, i) => {
+        el.classList.add('reveal');
+        el.setAttribute('data-delay', String(Math.min(i, 4)));
+        revealObserver.observe(el);
+    });
+});
 
 // Typing effect for hero subtitle
 function typeWriter(element, text, speed = 50) {
@@ -407,13 +413,15 @@ modalStyles.textContent = `
         left: 0;
         width: 100%;
         height: 100%;
-        background: rgba(0, 0, 0, 0.8);
+        background: rgba(0, 0, 0, 0.6);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
         display: flex;
         align-items: center;
         justify-content: center;
         z-index: 10000;
         opacity: 0;
-        transition: opacity 0.3s ease;
+        transition: opacity 0.35s cubic-bezier(0.4, 0, 0.2, 1);
         padding: 20px;
     }
     
@@ -423,53 +431,58 @@ modalStyles.textContent = `
     
     .modal-content {
         background: white;
-        border-radius: 16px;
+        border-radius: 24px;
         max-width: 800px;
         width: 100%;
         max-height: 90vh;
         overflow-y: auto;
-        padding: 3rem;
+        padding: 2.5rem;
         position: relative;
-        transform: translateY(50px);
-        transition: transform 0.3s ease;
+        transform: translateY(30px) scale(0.97);
+        transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+        box-shadow: 0 32px 80px rgba(0, 0, 0, 0.15);
+        border: 1px solid rgba(0, 0, 0, 0.06);
     }
     
     .modal-overlay.active .modal-content {
-        transform: translateY(0);
+        transform: translateY(0) scale(1);
     }
     
     .modal-close {
         position: absolute;
-        top: 1.5rem;
-        right: 1.5rem;
+        top: 1.25rem;
+        right: 1.25rem;
         background: none;
         border: none;
-        font-size: 2rem;
+        font-size: 1.75rem;
         cursor: pointer;
-        color: #6b7280;
-        transition: color 0.3s ease;
+        color: #94a3b8;
+        transition: all 0.25s ease;
         width: 40px;
         height: 40px;
         display: flex;
         align-items: center;
         justify-content: center;
-        border-radius: 8px;
+        border-radius: 12px;
     }
     
     .modal-close:hover {
-        color: #2563eb;
-        background: #f3f4f6;
+        color: #1a1a2e;
+        background: #f1f5f9;
     }
     
     .modal-content h2 {
-        color: #1f2937;
+        color: #1a1a2e;
         margin-bottom: 1.5rem;
         padding-right: 40px;
+        font-weight: 700;
+        letter-spacing: -0.02em;
     }
     
     .modal-body {
-        color: #6b7280;
+        color: #64748b;
         line-height: 1.8;
+        font-size: 0.95rem;
     }
     
     .modal-body p {
@@ -485,7 +498,7 @@ modalStyles.textContent = `
     }
     
     .modal-body strong {
-        color: #1f2937;
+        color: #1a1a2e;
     }
     
     .modal-footer {
@@ -497,6 +510,7 @@ modalStyles.textContent = `
     @media (max-width: 768px) {
         .modal-content {
             padding: 2rem 1.5rem;
+            border-radius: 20px;
         }
     }
 `;
