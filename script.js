@@ -214,16 +214,12 @@ function getProjectDetails(index) {
                 <p class="modal-resource-links"><a href="https://d19ob9sqegt2wc.cloudfront.net/stage/uploads/India_AI_Impact_Summit2026_Compendium_Real_World_Impactof_Ai_In_Education_Updated_compressed_5d742de5a3.pdf" target="_blank" rel="noopener noreferrer"><strong>Official casebook (PDF)</strong></a> &middot; <a href="https://udhyam.org/2026/02/26/udhyam-at-the-india-ai-impact-summit-2026/" target="_blank" rel="noopener noreferrer"><strong>Udhyam: India AI Impact Summit 2026</strong></a></p>
                 <div class="modal-recognition-gallery" aria-label="India AI Impact Summit and casebook photos">
                     <figure class="modal-recognition-figure">
-                        <img src="recognition-india-ai-casebook.jpg" alt="India AI Impact Summit — Real-World AI in Education casebook" loading="lazy" width="640" height="360">
-                        <figcaption>Casebook launch / cover</figcaption>
+                        <img src="summit-presentation.png" alt="Presenting Udhyam Saathi at India AI Impact Summit 2026" loading="lazy" width="640" height="360">
+                        <figcaption>Presenting at India AI Impact Summit</figcaption>
                     </figure>
                     <figure class="modal-recognition-figure">
-                        <img src="recognition-india-ai-summit-showcase.jpg" alt="Showcasing Udhyam Saathi at India AI Impact Summit South×South event" loading="lazy" width="640" height="360">
-                        <figcaption>South-South showcase</figcaption>
-                    </figure>
-                    <figure class="modal-recognition-figure">
-                        <img src="recognition-india-ai-author-pages.jpg" alt="Case study pages authored in the AI in Education casebook" loading="lazy" width="640" height="360">
-                        <figcaption>Author pages in casebook</figcaption>
+                        <img src="summit-booth.png" alt="Udhyam Saathi booth at India AI Impact Summit South-South event" loading="lazy" width="640" height="360">
+                        <figcaption>South-South showcase booth</figcaption>
                     </figure>
                 </div>
                 

@@ -1228,6 +1228,21 @@ section {
     font-size: 0.8rem;
 }
 
+.award-collage {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3px;
+    background: rgba(255, 255, 255, 0.15);
+    height: 220px;
+}
+
+.award-collage .award-image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: top center;
+}
+
 .award-card-government {
     border: 2px solid rgba(30, 64, 175, 0.25);
     box-shadow: 0 8px 28px rgba(30, 64, 175, 0.12);
@@ -1623,6 +1638,10 @@ section {
     .award-image-container,
     .award-placeholder-image {
         height: 150px;
+    }
+
+    .award-collage {
+        height: 170px;
     }
 
     .awards-grid-new {
